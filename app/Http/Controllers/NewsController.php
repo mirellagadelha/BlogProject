@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\News;
+use Validator;
+use Response;
+use Illuminate\Support\Facades\Input;
 
 class NewsController extends Controller
 {
@@ -13,7 +17,14 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $news = News::orderBy('created_at', 'desc')->paginate(10);
+        return view('news.index', compact('news'));
+    }
+
+    public function listNews()
+    {
+        $news = News::orderBy('created_at', 'desc')->paginate(10);
+        return view('news.admin', compact('news'));
     }
 
     /**
@@ -34,7 +45,32 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = array(
+            'title' => 'required',
+            'body' => 'required',
+            'category' => 'required'
+        );
+
+        $validator = Validator::make(Input::all(), $rules);
+        
+        if ($validator->fails())
+        {
+            return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
+        } else
+        {
+            $news = new News;
+            $news->title = $request->title;
+            $news->body = $request->body;
+            $news->category = $request->category;
+            $news->author = $request->author;
+            $news->keywords = $request->keywords;
+            $news->save();
+
+            $request->session()->flash('message', 'Notícia cadastrada com sucesso!');
+            $request->session()->flash('message-type', 'success');
+
+            return response()->json(json_encode($news));
+        }
     }
 
     /**
@@ -45,7 +81,9 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $news = News::find($id);
+        
+        return view('news.show')->with('news', $news);
     }
 
     /**
@@ -66,9 +104,15 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
-        //
+        $edit = News::find($id)->update($request->all());
+        
+        $request->session()->flash('message', 'Notícia atualizada com sucesso!');
+        $request->session()->flash('message-type', 'success');
+
+        return response()->json(json_encode($edit));
     }
 
     /**
@@ -77,8 +121,13 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        News::find($id)->delete();
+
+        $request->session()->flash('message', 'Notícia excluída com sucesso!');
+        $request->session()->flash('message-type', 'success');
+
+        return response()->json();
     }
 }

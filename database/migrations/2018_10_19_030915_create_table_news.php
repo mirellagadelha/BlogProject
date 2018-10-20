@@ -18,7 +18,7 @@ class CreateTableNews extends Migration
             $table->increments('id');
 
             $table->string('title', 255);
-            $table->string('body', 255);
+            $table->longText('body', 255);
             $table->string('category', 255);
             $table->string('author', 255);
             $table->string('keywords', 255);
