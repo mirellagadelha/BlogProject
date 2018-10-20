@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-
 Route::resource('news','NewsController');
+
+Route::get('/', 'NewsController@index');
 Route::get('/admin','NewsController@listNews');

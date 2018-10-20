@@ -4,9 +4,9 @@
 	<header class="header-blog" style="background-image: url('/images/header.png');">
 		<div class="container">
 	    	<div class="d-flex header-nav">
-	            <a class="nav-icon-logo" href="/news"><i class="icon ion-md-list"></i></a>
+	            <a class="nav-icon-logo" href="/"><i class="icon ion-md-list"></i></a>
 	            <ul class="nav">
-	              	<li class="nav-item active"><a class="nav-link" href="/news">Home</a></li>
+	              	<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
 	              	<li class="nav-item"><a class="nav-link" href="/admin">Conteúdo</a></li>
 	            </ul>
 	        </div>
