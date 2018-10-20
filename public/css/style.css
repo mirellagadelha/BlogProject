@@ -1,0 +1,290 @@
+@font-face {
+	font-family: 'proxima_nova_rgregular';
+	src: url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.woff2') format('woff2'),  url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'proxima_nova_rgbold';
+	src: url('../fonts/mark_simonson_-_proxima_nova_bold-webfont.woff2') format('woff2'),  url('../fonts/mark_simonson_-_proxima_nova_bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'proxima_nova_cn_ltlight';
+	src: url('../fonts/mark_simonson_-_proxima_nova_condensed_light-webfont.woff2') format('woff2'),  url('../fonts/mark_simonson_-_proxima_nova_condensed_light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'proxima_nova_ltlight';
+	src: url('../fonts/mark_simonson_-_proxima_nova_light-webfont.woff2') format('woff2'),  url('../fonts/mark_simonson_-_proxima_nova_light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1.header-title {
+  font-family: "proxima_nova_rgregular", serif;
+  text-transform: uppercase;
+}
+
+h2.blog-post-title {
+  font-size: 18px;
+  font-family: 'proxima_nova_rgregular';
+  text-transform: uppercase;
+  color: #145E69;
+}
+
+.card-text, .card-keywords {
+  text-align: justify;
+  font-family: 'proxima_nova_ltlight';
+  font-size: 15px;
+
+}
+
+.card-body {
+  padding: 2.25rem !important;
+}
+
+body {
+  background: #e8e8e8;
+}
+
+.post-card-tags, .post-card-author {
+  display: block;
+  margin-bottom: 4px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font-family: 'proxima_nova_ltlight';
+}
+
+.header-blog {
+  position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    background-color: #202f31;
+    background-blend-mode: overlay;
+}
+
+.header-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8vw 4vw;
+  min-height: 200px;
+  max-height: 450px;
+  text-align: center;
+}
+
+.site-description {
+  font-family: 'proxima_nova_rgregular';
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.nav-icon-logo {
+  margin-right: 24px;
+  padding: 11px 0;
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1em;
+}
+
+.nav-icon-logo i:hover {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  margin: 0 0 0 -12px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.nav li a {
+  display: block;
+  margin: 0;
+  padding: 10px 12px;
+  color: #fff;
+  opacity: 0.8;
+  font-family: 'proxima_nova_rgbold';
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.nav li a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.news-feed {
+  margin-top: -50px;
+}
+
+a.link-see-more {
+  text-transform: uppercase;
+  font-family: 'proxima_nova_ltlight';
+  font-weight: 700;
+  font-size: 12px;
+  color: #000;
+  margin-left: 160px;
+}
+
+a.link-see-more:hover, a.blog-link:hover {
+  text-decoration: none;
+}
+
+.table thead th {
+  text-transform: uppercase;
+  font-family: 'proxima_nova_rgbold';
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.table tbody td {
+  font-family: 'proxima_nova_ltlight';
+  font-size: 15px;
+}
+
+.icon-edit, .icon-delete {
+  margin-right: 24px;
+  padding: 11px 0;
+  font-size: 1.7rem;
+  line-height: 1em;
+}
+
+.icon-edit {
+  color: #145E69;
+}
+
+.icon-delete {
+  color: #f4554a;
+}
+
+.link-add-news {
+  margin: 0 0 25px 0;
+}
+
+.btn-default-cancel {
+  background: #f4554a;
+  color: white;
+  font-family: 'proxima_nova_ltlight';
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-default-blue {
+  background: #145E69;
+  color: white;
+  font-family: 'proxima_nova_ltlight';
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-default-blue:hover {
+  color: white;
+}
+
+.admin-feed {
+  margin-top: 20px;
+  padding: 2.25rem !important;
+  background-color: #fff;
+}
+
+.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+  padding: 20px 30px;
+}
+
+.modal .modal-content {
+  border-radius: 3px;
+  width: 600px;
+}
+
+.modal .modal-footer {
+  background: #ecf0f1;
+  border-radius: 0 0 3px 3px;
+}
+
+.modal .modal-title {
+  display: inline-block;
+  font-family: 'proxima_nova_ltlight';
+  font-weight: 700;
+  color: #145E69;
+}
+
+.modal .form-control {
+  border-radius: 2px;
+  box-shadow: none;
+  border-color: #dddddd;
+  font-family: 'proxima_nova_ltlight';
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modal textarea.form-control {
+  resize: vertical;
+}
+
+.modal .btn {
+  border-radius: 2px;
+  min-width: 100px;
+}
+
+.modal form label {
+  font-weight: normal;
+  font-family: 'proxima_nova_ltlight';
+  font-size: 14px;
+}
+
+.modal-body {
+  font-family: 'proxima_nova_ltlight';
+}
+
+.admin-page .header-blog .header-content, .idNews {
+    display: none;
+}
+
+.header-news {
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+
+.post-card-tags {
+  margin-right: 20px;
+}
+
+.post-card-tags .icon, .post-card-author .icon{
+  margin-right: 10px;
+}
+
+.news-content .card-text {
+  font-size: 19px;
+}
+
+.news-content {
+    max-width: 900px !important;
+}
