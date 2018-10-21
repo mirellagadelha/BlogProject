@@ -20,8 +20,8 @@ class CreateTableNews extends Migration
             $table->string('title', 255);
             $table->longText('body', 255);
             $table->string('category', 255);
-            $table->string('author', 255);
-            $table->string('keywords', 255);
+            $table->string('author', 255)->nullable();
+            $table->string('keywords', 255)->nullable();
 
             $table->timestamps();
         });

@@ -24,10 +24,14 @@
                     <div class="card-body">
                     	<div class="header-news">
                         	<span class="post-card-tags"><i class="icon ion-md-pricetag"></i>Tags: {{ $news->category }}</span>
-                        	<span class="post-card-author"><i class="icon ion-md-contact"></i>Autor: {{ $news->author }}</span>
+                            @if(isset($news->author))
+                        	   <span class="post-card-author"><i class="icon ion-md-contact"></i>Autor: {{ $news->author }}</span>
+                            @endif
                         </div>
                         <p class="card-text">{{ $news->body }}</p>
-                        <span class="card-keywords"><b>Palavras-chave: </b>{{ $news->keywords }}</span>
+                        @if(isset($news->keywords))
+                            <span class="card-keywords"><b>Palavras-chave: </b>{{ $news->keywords }}</span>
+                        @endif
                     </div>
                 </div>
             </div>

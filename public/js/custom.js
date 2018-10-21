@@ -44,7 +44,6 @@
 		});
 
 		$("#editFormNews").submit(function(e) {
-			e.preventDefault();
 			var id = $("#editFormNews input[name=id]").val();
 			var dataForm = $("#editModal form").serialize();
 			var url = 'id='+id+'&'+dataForm;
